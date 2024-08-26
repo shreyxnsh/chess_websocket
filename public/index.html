@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Turn-based Battle</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id="game-container">
+        <header>
+            <h1>Epic Turn-based Battle</h1>
+            <h2>Strategize Your Victory!</h2>
+        </header>
+
+        <section id="player-selection">
+            <h2>Select Your Warrior</h2>
+            <button id="select-player-a">Warrior A</button>
+            <button id="select-player-b">Warrior B</button>
+        </section>
+
+        <section id="game-status">
+            <p>Game Status: <span id="status-text">Waiting for players...</span></p>
+        </section>
+
+        <section id="game-board-container">
+            <h3>Battlefield</h3>
+            <div id="game-board"></div>
+        </section>
+
+        <section id="controls-container">
+            <h3>Command Your Piece</h3>
+            <div id="move-controls">
+                <div id="selected-piece"></div>
+                <div id="move-buttons">
+                    <button id="move-up">Up</button>
+                    <button id="move-down">Down</button>
+                    <button id="move-left">Left</button>
+                    <button id="move-right">Right</button>
+                </div>
+            </div>
+            <button id="end-turn-button">End Turn</button>
+        </section>
+
+        <section id="piece-guide">
+            <h3>Instructions </h3>
+            <ul>
+                <li>Pawn (P): Moves 1 step forward</li>
+                <li>Rook (R): Moves up to 2 steps in any straight direction</li>
+                <li>Bishop (B): Moves up to 2 steps diagonally</li>
+                <li>Queen (Q): Moves up to 3 steps in any direction</li>
+            </ul>
+        </section>
+
+        <section id="move-history">
+            <h3>Move History</h3>
+            <ul id="history-list"></ul>
+        </section>
+
+        <footer>
+            <button id="reset-game-button">Reset Game</button>
+        </footer>
+    </div>
+
+    <div id="game-over-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="game-over-message"></h2>
+            <button id="new-game-button">Start New Game</button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

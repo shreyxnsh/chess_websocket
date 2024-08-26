@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+#game-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #1b5e20;
+}
+
+header h2 {
+    font-size: 1.2em;
+    color: #388e3c;
+    margin-bottom: 20px;
+}
+
+#player-selection {
+    margin-bottom: 20px;
+}
+
+#player-selection button {
+    padding: 10px 15px;
+    margin: 0 10px;
+    background-color: #66bb6a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#player-selection button:hover {
+    background-color: #43a047;
+}
+
+#game-board-container {
+    margin: 20px 0;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-gap: 2px;
+    margin: 0 auto;
+    background-color: #c8e6c9;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    background-color: #a5d6a7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cell:hover {
+    background-color: #81c784;
+}
+
+.cell.selected {
+    background-color: #66bb6a;
+}
+
+#move-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#move-buttons button {
+    padding: 10px;
+    margin: 0 5px;
+    background-color: #81c784;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#move-buttons button:hover {
+    background-color: #66bb6a;
+}
+
+#end-turn-button {
+    padding: 10px 20px;
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#end-turn-button:hover {
+    background-color: #2e7d32;
+}
+
+#piece-guide, #move-history {
+    margin-top: 20px;
+    text-align: left;
+    background-color: #c8e6c9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#history-list {
+    list-style-type: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: #a5d6a7;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+footer button {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+footer button:hover {
+    background-color: #d32f2f;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
